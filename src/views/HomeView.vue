@@ -22,7 +22,7 @@ const movieStore = useMovieStore()
         <div class="hero bg-base-200 min-h-screen rounded-xl">
           <div class="hero-content flex-col lg:flex-row">
             <img
-              src="https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg"
+              src="http://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg"
               class="max-w-sm rounded-lg shadow-2xl" />
             <div>
               <h1 class="text-5xl font-bold">Guardians of the Galaxy Vol. 2</h1>
