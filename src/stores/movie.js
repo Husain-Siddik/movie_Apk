@@ -7,6 +7,7 @@ export const useMovieStore = defineStore('Movie', {
   state: () => ({
     search: ref(null),
     movies: ref([]),
+    singleMovie: null,
 
   }),
 
@@ -21,6 +22,18 @@ export const useMovieStore = defineStore('Movie', {
 
         this.movies = data.Search
       }
-    }
+    },
+
+    async getSingleMovies(id) {
+
+      const { data } = await axios.get(`http://www.omdbapi.com/?i=${id}&apikey=87ec46ac&plot=full`)
+      //  console.log(id);
+      this.singleMovie = data
+      //console.log(data);
+
+    },
+
+
+
   },
 })

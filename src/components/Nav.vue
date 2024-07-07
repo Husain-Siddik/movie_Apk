@@ -24,7 +24,7 @@ function increaseCount() {
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                     <li> <router-link to="/">
                             <i class="pi pi-home" style="color: green ;font-size: 1.3rem"></i>Home</router-link></li>
-                    <li> <router-link to="/about"> About</router-link></li>
+                    <!-- <li> <router-link to="/about/:id"> About</router-link></li> -->
 
                 </ul>
             </div>
@@ -37,7 +37,7 @@ function increaseCount() {
                 <li> <router-link to="/"> <span>
                             <i class="pi pi-home" style="color: green ;font-size: 1.3rem"></i>
                         </span>Home</router-link></li>
-                <li> <router-link to="/about"> About</router-link></li>
+                <li> <router-link to="/movie/"> About</router-link></li>
             </ul>
         </div>
         <div class="navbar-end">
