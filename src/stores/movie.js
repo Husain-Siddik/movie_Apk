@@ -18,7 +18,7 @@ export const useMovieStore = defineStore('Movie', {
   actions: {
     async searchMovies() {
       if (this.search != "") {
-        const { data } = await axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=87ec46ac&s=${this.search}`)
+        const { data } = await axios.get(`https://www.omdbapi.com/?i=tt3896198&apikey=87ec46ac&s=${this.search}`)
 
         this.movies = data.Search
       }
@@ -26,7 +26,7 @@ export const useMovieStore = defineStore('Movie', {
 
     async getSingleMovies(id) {
 
-      const { data } = await axios.get(`http://www.omdbapi.com/?i=${id}&apikey=87ec46ac&plot=full`)
+      const { data } = await axios.get(`https://www.omdbapi.com/?i=${id}&apikey=87ec46ac&plot=full`)
       //  console.log(id);
       this.singleMovie = data
       //console.log(data);
