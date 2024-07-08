@@ -3,6 +3,7 @@ import { RouterLink } from 'vue-router'
 import { useMovieStore } from '../stores/movie'
 const movieStore = useMovieStore()
 import footerItem from '../components/footerItem.vue'
+import pagenation from '../components/pagenation.vue'
 </script>
 
 <template>
@@ -31,7 +32,7 @@ import footerItem from '../components/footerItem.vue'
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
               quasi. In deleniti eaque aut repudiandae et a id nisi.
             </p>
-            <button class="btn btn-primary">View Dtails</button>
+            <button class="btn btn-primary" @click="movieStore.searchOnePageMovies">View Dtails</button>
           </div>
         </div>
       </div>
@@ -72,6 +73,6 @@ import footerItem from '../components/footerItem.vue'
 
     </div>
   </div>
-
+  <pagenation />
   <footer-item />
 </template>

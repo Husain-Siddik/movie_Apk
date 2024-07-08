@@ -11,7 +11,9 @@ onMounted(() => {
     MovieStore.getSingleMovies(route.params.id)
 })
 
-
+// function goHome() {
+//     router.push({ name: 'home', params: { username: 'erina' } })
+// }
 </script>
 
 <template>
@@ -32,11 +34,14 @@ onMounted(() => {
                 <p class="text-2xl pb-2"> Actors : {{ MovieStore.singleMovie?.Actors }}</p>
 
                 <div class="card-actions justify-end">
-
+                    <router-link to="/">
+                        <button class="btn btn-error "> Back</button>
+                    </router-link>
                 </div>
             </div>
         </div>
     </div>
+
 
 
 </template>

@@ -8,6 +8,8 @@ export const useMovieStore = defineStore('Movie', {
     search: ref(null),
     movies: ref([]),
     singleMovie: null,
+    movies1: ref([]),
+    pageOneMovie: ref([])
 
   }),
 
@@ -33,6 +35,17 @@ export const useMovieStore = defineStore('Movie', {
 
     },
 
+    async searchOnePageMovies() {
+      // movies search with page namber
+      if (this.search != "" && this.search !== 'null') {
+        const { data } = await axios.get(`https://www.omdbapi.com/?i=tt3896198&apikey=87ec46ac&s=${this.search}&page=${this.movies1}`)
+
+        this.pageOneMovie = data.Search
+
+        console.log(this.pageOneMovie);
+      }
+
+    },
 
 
   },
