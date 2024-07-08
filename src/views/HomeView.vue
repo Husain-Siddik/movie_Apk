@@ -22,19 +22,21 @@ import pagenation from '../components/pagenation.vue'
     <!-- /////////////////////////////////////////////////////////////////////// -->
     <div>
       <div class="hero bg-base-200 min-h-screen rounded-xl">
-        <div class="hero-content flex-col lg:flex-row">
-          <div class="flex-1">
-            <img src="http://wallpapercave.com/wp/wp2033177.jpg" />
+        <router-link :to="{ name: 'movieNextPage' }">
+          <div class="hero-content flex-col lg:flex-row">
+            <div class="flex-1">
+              <img src="http://wallpapercave.com/wp/wp2033177.jpg" />
+            </div>
+            <div class="flex-1">
+              <h1 class="text-5xl font-bold">Guardians of the Galaxy Vol. 2</h1>
+              <p class="py-6">
+                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                quasi. In deleniti eaque aut repudiandae et a id nisi.
+              </p>
+              <button class="btn btn-primary" @click="movieStore.searchOnePageMovies">View Dtails</button>
+            </div>
           </div>
-          <div class="flex-1">
-            <h1 class="text-5xl font-bold">Guardians of the Galaxy Vol. 2</h1>
-            <p class="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-              quasi. In deleniti eaque aut repudiandae et a id nisi.
-            </p>
-            <button class="btn btn-primary" @click="movieStore.searchOnePageMovies">View Dtails</button>
-          </div>
-        </div>
+        </router-link>
       </div>
     </div>
 

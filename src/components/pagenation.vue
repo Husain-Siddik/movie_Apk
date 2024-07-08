@@ -23,7 +23,7 @@ function call() {
 
 <template>
 
-    <div class="mx-auto w-1/5">
+    <div class="mx-auto flex items-center justify-center w-4/5 lg:w-1/5">
         <div class="join " @click="moviestore.searchOnePageMovies()">
             <router-link :to="{ name: 'movieNextPage' }">
                 <input class="join-item btn btn-square" type="button" name="options" :value="2" checked="checked"
