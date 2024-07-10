@@ -1,9 +1,16 @@
 <script setup>
+import { onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useMovieStore } from '../stores/movie'
 const movieStore = useMovieStore()
 import footerItem from '../components/footerItem.vue'
 import pagenation from '../components/pagenation.vue'
+
+
+onMounted(() => {
+  movieStore.defaultMovie()
+  // console.log(movieStore.movies);
+})
 </script>
 
 <template>
@@ -11,7 +18,7 @@ import pagenation from '../components/pagenation.vue'
 
   <div class="container flex justify-center items-center">
     <form @submit.prevent="movieStore.searchMovies">
-      <input type="text" placeholder="search  here" class="input input-bordered input-inf "
+      <input type="text" placeholder="search Movie  here" class="input input-bordered input-inf "
         v-model="movieStore.search" />
       <button class=" pl-5">search</button>
     </form>
@@ -22,20 +29,28 @@ import pagenation from '../components/pagenation.vue'
     <!-- /////////////////////////////////////////////////////////////////////// -->
     <div>
       <div class="hero bg-base-200 min-h-screen rounded-xl">
+        <!-- router here -->
         <router-link :to="{ name: 'movieNextPage' }">
+
           <div class="hero-content flex-col lg:flex-row">
+
             <div class="flex-1">
-              <img src="http://wallpapercave.com/wp/wp2033177.jpg" />
+              <img :src="movieStore.heroContant?.Poster" />
             </div>
+
             <div class="flex-1">
-              <h1 class="text-5xl font-bold">Guardians of the Galaxy Vol. 2</h1>
+              <h1 class="text-5xl font-bold">{{ movieStore.heroContant?.Title }}</h1>
               <p class="py-6">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                quasi. In deleniti eaque aut repudiandae et a id nisi.
+                The general public is concerned over having Superman on their planet and letting the \"Dark Knight\ -
+                Batman - pursue the streets of Gotham. While this is happening, a power-phobic Batman tries to attack
+                Superman. Meanwhile, Superman tries to settle on a decision, and Lex Luthor, the criminal mastermind and
+                millionaire, tries to use his own advantages to fight the "Man of Steel"
               </p>
               <button class="btn btn-primary" @click="movieStore.searchOnePageMovies">View Dtails</button>
             </div>
+
           </div>
+          <!-- router End here -->
         </router-link>
       </div>
     </div>
