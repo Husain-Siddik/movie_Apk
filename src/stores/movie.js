@@ -16,7 +16,7 @@ export const useMovieStore = defineStore('Movie', {
   }),
 
   getters: {
-
+    //   in this part aroow function can be write 
   },
 
   actions: {
@@ -56,7 +56,7 @@ export const useMovieStore = defineStore('Movie', {
       }
     },
 
-
+    // this is details part
 
     async getSingleMovies(id) {
 
@@ -72,6 +72,10 @@ export const useMovieStore = defineStore('Movie', {
 
     },
 
+
+    //  pagenetion  set kora
+
+
     async searchOnePageMovies() {
       // movies search with page namber
       if (this.search != "" && this.search !== 'null') {
@@ -79,11 +83,11 @@ export const useMovieStore = defineStore('Movie', {
 
         this.pageOneMovie = data.Search
 
-
-
       }
 
-    }
+    },
+
+
 
 
 

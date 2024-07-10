@@ -11,6 +11,8 @@ onMounted(() => {
   movieStore.defaultMovie()
   // console.log(movieStore.movies);
 })
+
+
 </script>
 
 <template>
